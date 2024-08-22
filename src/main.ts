@@ -25,7 +25,7 @@ let data:ApiResponse;
 
 
 async function fetchData():Promise<void>{
-    const url:string =`http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${ciudad}&days=3&aqi=no&alerts=no&lang=es`
+    const url:string =`https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${ciudad}&days=3&aqi=no&alerts=no&lang=es`
     try {
         const response = await fetch(url)
         if(!response.ok){
