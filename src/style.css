@@ -1,0 +1,116 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: black;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+div{
+  margin: 0;
+}
+
+body {
+  background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,0,0,1) 60%);
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.titulo {
+  font-size: 3.3em;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+.inputCity{
+  width: 90%;
+  padding: 8px;
+  margin: 10px;
+  margin-bottom: 0px;
+  border-radius: 5px;
+  border: solid 1px white;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 80%;
+  min-height: 90dvh;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary-card {
+  height: 40dvh;
+  border-radius: 15px;
+  padding: 2em;
+  width: 100%;
+  max-width: 350px;
+  background-color: #e8e8e842;
+  color: white;
+  margin: 1.5em auto;
+  /* box-shadow: 0 0 100px #2b80ff77; */
+}
+.primary-card-title{
+  margin: 0px;
+}
+.primary-temp{
+  font-weight:900;
+  font-size: 2em;
+  display: block;
+}
+.primary-card-hum{
+  margin: 0px;
+}
+.primary-card-wind{
+  margin: 0px;
+  margin-top: 5px;
+}
+.primary-img{
+  width: 45%;
+  margin-top: 10px;
+  filter: drop-shadow(0px 0px 5px #14141465);
+}
+.secondary-container{
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  gap: 3%;
+  max-width: 400px;
+}
+.secondary-card {
+  min-height: 10dvh;
+  border-radius: 10px;
+  padding: 5px;
+  width: 30%;
+  background-color: #e8e8e842;
+  color: white;
+}
+.sec-card-title{
+  margin-bottom: 0;
+}
+.sec-temp{
+  font-weight:900;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  display: block;
+}
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="header">
+        <h1 class="titulo">WeatherApp</h1>
+        <input
+          class="inputCity"
+          type="text"
+          placeholder="Ingresa el nombre de una ciudad"
+        />
+      </div>
+
+      <div class="primary-card">
+        <h2 class="primary-card-title"></h2>
+        <small class="small-city"></small>
+        <div>
+          <img class="primary-img" src="" alt="" />
+        </div>
+        <span class="primary-temp"></span>
+        <small class="primary-temp-subtext"></small>
+        <p class="primary-card-wind"></p>
+        <p class="primary-card-hum"></p>
+      </div>
+      <div class="secondary-container">
+        <div class="secondary-card">
+          <h3 class="sec-card-title" id="title-1"></h3>
+          <small class="sec-card-small" id="small-1"></small>
+          <div>
+            <img class="sec-img" id="sec-img-1" src="" alt="" />
+          </div>
+          <span class="sec-temp" id="sec-temp-1"></span>
+          <small class="sec-temp-subtext" id="sec-small-1"></small>
+        </div>
+        <div class="secondary-card">
+          <h3 class="sec-card-title" id="title-2"></h3>
+          <small class="sec-card-small" id="small-2"></small>
+          <div>
+            <img class="sec-img" id="sec-img-2" src="" alt="" />
+          </div>
+          <span class="sec-temp" id="sec-temp-2"></span>
+          <small class="sec-temp-subtext" id="sec-small-2"></small>
+        </div>
+        <div class="secondary-card">
+          <h3 class="sec-card-title" id="title-3"></h3>
+          <small class="sec-card-small" id="small-3"></small>
+          <div>
+            <img class="sec-img" id="sec-img-3" src="" alt="" />
+          </div>
+          <span class="sec-temp" id="sec-temp-3"></span>
+          <small class="sec-temp-subtext" id="sec-small-3"></small>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
