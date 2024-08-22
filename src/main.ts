@@ -66,29 +66,17 @@ function cambiarDom():void{
         //Ahora hace lo mismo con las cards secundarias
         let dias:Array<any> = data.forecast.forecastday;
         //Inserta dias de la semana
-        document.getElementById("title-1")!.innerHTML= getDayOfWeek(dias[0].date);
-        document.getElementById("title-2")!.innerHTML= getDayOfWeek(dias[1].date);
-        document.getElementById("title-3")!.innerHTML= getDayOfWeek(dias[2].date);
-        //Inserta fecha
-        document.getElementById("small-1")!.innerHTML= formatDate(dias[0].date);
-        document.getElementById("small-2")!.innerHTML= formatDate(dias[1].date);
-        document.getElementById("small-3")!.innerHTML= formatDate(dias[2].date);
-        //Inserta imagenes
-        (document.getElementById("sec-img-1") as HTMLImageElement).src = (dias[0].day.condition.icon) ;
-        (document.getElementById("sec-img-2") as HTMLImageElement).src = (dias[1].day.condition.icon) ;
-        (document.getElementById("sec-img-3") as HTMLImageElement).src = (dias[2].day.condition.icon) ;
-
-        (document.getElementById("sec-img-1") as HTMLImageElement).src = (dias[0].day.condition.icon) ;
-        (document.getElementById("sec-img-2") as HTMLImageElement).src = (dias[1].day.condition.icon) ;
-        (document.getElementById("sec-img-3") as HTMLImageElement).src = (dias[2].day.condition.icon) ;
-        
-        document.getElementById("sec-temp-1")!.innerHTML = (dias[0].day.avgtemp_c + "°");
-        document.getElementById("sec-temp-2")!.innerHTML = (dias[1].day.avgtemp_c + "°");
-        document.getElementById("sec-temp-3")!.innerHTML = (dias[2].day.avgtemp_c + "°");
-        
-        (document.getElementById("sec-img-1") as HTMLImageElement).alt = (dias[0].day.condition.text);
-        (document.getElementById("sec-img-2") as HTMLImageElement).alt = (dias[1].day.condition.text);
-        (document.getElementById("sec-img-3") as HTMLImageElement).alt = (dias[2].day.condition.text);
+        dias.forEach((dia, i) => {
+            // Inserta días de la semana
+            document.getElementById(`title-${i + 1}`)!.innerHTML = getDayOfWeek(dia.date);
+            // Inserta fecha
+            document.getElementById(`small-${i + 1}`)!.innerHTML = formatDate(dia.date);
+            // Inserta imágenes
+            (document.getElementById(`sec-img-${i + 1}`) as HTMLImageElement).src = dia.day.condition.icon;
+            (document.getElementById(`sec-img-${i + 1}`) as HTMLImageElement).alt = dia.day.condition.text;
+            // Inserta temperatura
+            document.getElementById(`sec-temp-${i + 1}`)!.innerHTML = `${dia.day.avgtemp_c}°`;
+        });
         
 
     });

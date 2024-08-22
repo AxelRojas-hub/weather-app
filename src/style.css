@@ -60,13 +60,12 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(
 
 .primary-card {
   border-radius: 15px;
-  padding: 2em;
+  padding: 1.5em;
   width: 90%;
   max-width: 350px;
   background-color: #e8e8e842;
   color: white;
   margin: 1.5em auto;
-  /* box-shadow: 0 0 100px #2b80ff77; */
 }
 .primary-card-title{
   margin: 0px;
@@ -91,7 +90,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(
 .secondary-container{
   display: flex;
   justify-content: center;
-  width: 90%;
+  width: 91%;
   gap: 3%;
   max-width: 400px;
 }
