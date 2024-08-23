@@ -51,7 +51,7 @@ function cambiarDom():void{
         temperatura.textContent = String(data.current.temp_c)+"°";
         //Agrega la imagen y el texto alt
         const imagen = document.querySelector(".primary-img") as HTMLImageElement;
-        imagen.src = data.current.condition.icon;
+        imagen.src = (data.current.condition.icon).replace("64x64","128x128");
         imagen.alt = data.current.condition.text;
         const imgSubText =document.querySelector(".primary-temp-subtext") as HTMLImageElement 
         imgSubText.innerHTML =data.current.condition.text;
